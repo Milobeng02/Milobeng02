@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quotation>
+    <store>
+        <name>FreshFruits Store</name>
+        <location>
+            <city>New York</city>
+            <country>USA</country>
+        </location>
+        <contact>
+            <phone>+1 123-456-7890</phone>
+            <email>info@freshfruitsstore.com</email>
+        </contact>
+    </store>
+    <customer>
+        <name>John Doe</name>
+        <contact>
+            <phone>+1 987-654-3210</phone>
+            <email>johndoe@email.com</email>
+        </contact>
+    </customer>
+    <quotationItems>
+        <item>
+            <name>Apple</name>
+            <quantity>10</quantity>
+            <pricePerUnit>1.50</pricePerUnit>
+        </item>
+        <item>
+            <name>Orange</name>
+            <quantity>15</quantity>
+            <pricePerUnit>1.20</pricePerUnit>
+        </item>
+        <item>
+            <name>Banana</name>
+            <quantity>20</quantity>
+            <pricePerUnit>0.80</pricePerUnit>
+        </item>
+    </quotationItems>
+    <totalPrice>56.00</totalPrice>
+</quotation>
