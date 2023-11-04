@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quotation>
+    <store>
+        <name>FreshFruits Store</name>
+        <location>
+            <city>Johor</city>
+            <country>Malaysia</country>
+        </location>
+        <contact>
+            <phone>+6 014-618 2598</phone>
+            <email>info@freshfruitsstore.com</email>
+        </contact>
+    </store>
+    
+    <quotationItems>
+        <item>
+            <name>Apple</name>
+            <quantity>10</quantity>
+            <pricePerUnit>1.50</pricePerUnit>
+        </item>
+        <item>
+            <name>Orange</name>
+            <quantity>15</quantity>
+            <pricePerUnit>1.20</pricePerUnit>
+        </item>
+        <item>
+            <name>Banana</name>
+            <quantity>20</quantity>
+            <pricePerUnit>0.80</pricePerUnit>
+        </item>
+        <item>
+            <name>Mango</name>
+            <quantity>5</quantity>
+            <pricePerUnit>2.00</pricePerUnit>
+        </item>
+        <item>
+            <name>Strawberry</name>
+            <quantity>8</quantity>
+            <pricePerUnit>3.50</pricePerUnit>
+        </item>
+        <item>
+            <name>Grapes</name>
+            <quantity>12</quantity>
+            <pricePerUnit>1.80</pricePerUnit>
+        </item>
+        <item>
+            <name>Pineapple</name>
+            <quantity>3</quantity>
+            <pricePerUnit>2.50</pricePerUnit>
+        </item>
+        <item>
+            <name>Peach</name>
+            <quantity>7</quantity>
+            <pricePerUnit>2.20</pricePerUnit>
+        </item>
+        <item>
+            <name>Kiwi</name>
+            <quantity>9</quantity>
+            <pricePerUnit>1.90</pricePerUnit>
+        </item>
+        <item>
+            <name>Watermelon</name>
+            <quantity>6</quantity>
+            <pricePerUnit>0.70</pricePerUnit>
+        </item>
+    </quotationItems>
+    <totalPrice>56.00</totalPrice>
+</quotation>
