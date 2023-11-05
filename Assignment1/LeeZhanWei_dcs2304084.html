@@ -43,6 +43,21 @@
             box-shadow: 0 1px #005f80;
             transform: translateY(10px);
         }
+        .contact-button, .location-button {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #ff7f50;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 6px 10px;
+        }
     </style>
 </head>
 <body background="fruit.jpg">
@@ -50,6 +65,9 @@
 <h1 align="center">Fruit Store Quotation</h1>
 
 <button class="button" onclick="fetchData()">Load Quotation</button>
+<button class="contact-button" onclick="showContact()">Contact</button>
+<button class="location-button" onclick="showLocation()">Location</button>
+
 
 <table id="quotationTable">
     <thead>
@@ -94,6 +112,34 @@
                 }
             })
             .catch(error => console.error(error));
+
+        function showContact() {
+        fetch('LeeZhanWei_dcs2304084.xml') 
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, 'text/xml');
+                const phone = xmlDoc.getElementsByTagName('phone')[0].textContent;
+                const email = xmlDoc.getElementsByTagName('email')[0].textContent;
+
+                alert('Phone: ' + phone + '\nEmail: ' + email);
+            })
+            .catch(error => console.error(error));
+    }
+
+    function showLocation() {
+        fetch('LeeZhanWei_dcs2304084.xml') 
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, 'text/xml');
+                const city = xmlDoc.getElementsByTagName('city')[0].textContent;
+                const country = xmlDoc.getElementsByTagName('country')[0].textContent;
+
+                alert('City: ' + city + '\nCountry: ' + country);
+            })
+            .catch(error => console.error(error));
+    }
     }
 </script>
 
