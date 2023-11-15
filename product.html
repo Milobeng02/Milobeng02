@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel= icon href=logo.png type= image/png>
+    <meta name="viewport" content="width=device-width" ,initial-scale ="1.0">
+    <title>DeeRed - All Products</title>
+    <link rel="stylesheet" href="Style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<!--Stars-->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;700;900&family=Roboto:ital,wght@0,400;0,900;1,100;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+
+
+
+</head>
+<body>
+    <div class="background-container">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/Logo.png" width="125px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href=Home>HOME</a></li>
+                        <li><a href=Home>Products</a></li>
+                        <li><a href=Home>About</a></li>
+                        <li><a href=Home>Contact</a></li>
+                        <li><a href=Home>Account</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-icon">
+                    <img src="images/cart.png" width="20px" height="20px">
+                </div>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div></div>
+    </div> <!-- End of background-container -->
+
+    <div class="BG11">
+    <div class="small-container">
+        
+        <div class="row row-2">
+            <h2>All Products</h2>
+            <select>
+                <option>Default Sorting</option>
+                <option>Sort by price</option>
+                <option>Sort by popularity</option>
+                <option>Sort by rating</option>
+                <option>Sort by sale</option>
+            </select>
+        </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/product-1.jpg">
+                    <h4>Red Printed T-Shirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    </div><!--Rating-->
+                    
+                        <p>RM49.90</p>
+                        <button onclick="addToCart('Red Printed T-Shirt', 49.90)">Add to Cart</button>
+                </div><!--col-4-->
+
+                <div class="col-4">
+                    <img src="images/product-4.jpg">
+                    <h4>Navy Printed T-Shirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        
+                    </div><!--Rating-->
+                    
+                        <p>RM49.90</p>
+                        <button onclick="addToCart('Navy Printed T-Shirt', 49.90)">Add to Cart</button>
+                </div><!--col-4-->
+                
+                
+                <div class="col-4">
+                    <img src="images/product-2.jpg">
+                    <h4>HRX Sport Shoes</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    </div><!--Rating-->
+                    
+                    <p>RM129.90 <b><pre class="exclusive-deal">Exclusive Deal!</pre></b></p>
+                    <button onclick="addToCart('HRX Sport Shoes', 49.90)">Add to Cart</button>
+                </div><!--col-4-->
+
+                <div class="col-4">
+                    <img src="images/product-3.jpg">
+                    <h4>Benneton Sport Long-Pant</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                        <i class="fa-solid fa-star-half" style="color: #6c84ac;"></i>
+                    </div><!--Rating-->
+                    
+                        <p>RM69.90</p>
+                        <button onclick="addToCart('HRX Sport Shoes', 49.90)">Add to Cart</button>
+                </div><!--col-4-->
+            </div>
+            
+    <div class="title">
+            <h2>Latest Products</h2>
+    </div><!--title--> 
+    <div class="row">
+        <div class="col-4">
+            <img src="images/product-5.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+            </div><!--Rating-->
+            
+                <p>RM49.90</p>
+                <button onclick="addToCart('Red Printed T-Shirt', 49.90)">Add to Cart</button>
+        </div><!--col-4-->
+
+        <div class="col-4">
+            <img src="images/product-6.jpg">
+            <h4>Navy Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                
+            </div><!--Rating-->
+            
+                <p>RM49.90</p>
+                <button onclick="addToCart('Red Printed T-Shirt', 49.90)">Add to Cart</button>
+        </div><!--col-4-->
+        
+        
+        <div class="col-4">
+            <img src="images/product-7.jpg">
+            <h4>HRX Sport Shoes</h4>
+            <div class="rating">
+                <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+            </div><!--Rating-->
+            
+            <p>RM129.90 <b><pre class="exclusive-deal">Exclusive Deal!</pre></b></p>
+            <button onclick="addToCart('Red Printed T-Shirt', 49.90)">Add to Cart</button>
+        </div><!--col-4-->
+
+        <div class="col-4">
+            <img src="images/product-8.jpg">
+            <h4>Benneton Sport Long-Pant</h4>
+            <div class="rating">
+                <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                <i class="fa-solid fa-star-half" style="color: #6c84ac;"></i>
+            </div><!--Rating-->
+            
+                <p>RM69.90</p>
+                <button onclick="addToCart('Red Printed T-Shirt', 49.90)">Add to Cart</button>
+        </div><!--col-4-->     
+        
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product-9.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                </div><!--Rating-->
+                
+                    <p>RM49.90</p>
+                    <button onclick="addToCart('Red Printed T-Shirt', 49.90)">Add to Cart</button>
+            </div><!--col-4-->
+
+            <div class="col-4">
+                <img src="images/product-10.jpg">
+                <h4>Navy Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    
+                </div><!--Rating-->
+                
+                    <p>RM49.90</p>
+                    <button onclick="addToCart('Red Printed T-Shirt', 49.90)">Add to Cart</button>
+            </div><!--col-4-->
+            
+            
+            <div class="col-4">
+                <img src="images/product-11.jpg">
+                <h4>HRX Sport Shoes</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                </div><!--Rating-->
+                
+                <p>RM129.90 <b><pre class="exclusive-deal">Exclusive Deal!</pre></b></p>
+                <button onclick="addToCart('Red Printed T-Shirt', 49.90)">Add to Cart</button>
+            </div><!--col-4-->
+
+            <div class="col-4">
+                <img src="images/product-12.jpg">
+                <h4>Benneton Sport Long-Pant</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star fa-bounce" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star" style="color: #6a83af;"></i>
+                    <i class="fa-solid fa-star-half" style="color: #6c84ac;"></i>
+                </div><!--Rating-->
+                
+                    <p>RM69.90</p>
+                    <button onclick="addToCart('Red Printed T-Shirt', 49.90)">Add to Cart</button>
+            </div><!--col-4-->
+            <div class="page-btn">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span> &#8594; </span>
+            </div>
+        </div></div></div></div>
+        </div>
+        </div><!--Row-->
+    </div><!--Container-->
+
+</div>
+    
+    
+<!--Footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download App App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="Images/logo-white.png">
+                <p>Our Purpose Is To Sustainable Make the Pleasure and the 
+                    Benefits of Sports Accessible To The Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>John Affiliate</li>
+                    </ul>
+            </div>
+
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                
+            </div>
+        </div></div></div>
+        <hr>
+        <p class="copyright">CopyRight 2023</p>
+    </div>
+</div>
+    <!--Js for toggle menu-->
+    <script>
+        var MenuItems=document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight =="0px")
+            {
+                MenuItems.style.maxHeight="200px";
+            }
+            else{
+                MenuItems.style.maxHeight="0px";
+            }
+        }
+    </script>
+    <script>
+        // Function to handle adding a product to the cart
+        function addToCart(productName, productPrice) {
+            // You can implement the logic to add the product to the cart here
+            // For simplicity, let's just print a message to the console for now
+            console.log(`Added ${productName} to the cart. Price: ${productPrice}`);
+        }
+    </script>
+</body>
+</html>
