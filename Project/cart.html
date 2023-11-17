@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel= icon href=logo.png type= image/png>
     <meta name="viewport" content="width=device-width" ,initial-scale ="1.0">
     <title>DeeRed - Cart</title>
     <link rel="stylesheet" href="Style.css">
@@ -18,27 +19,26 @@
 
 <body>
     <div class="background-container">
-        <div class="container" img src="images/stripred.jpg">
+        <div class="container">
             <div class="navbar">
                 <div class="logo">
-                <pre>    <img src="images/Logo.png" width="125px">
-                </div><!--logo-->
+                    <img src="Logo.png" width="125px">
+                </div>
                 <nav>
                     <ul id="MenuItems">
                         <li><a href=https://milobeng02.github.io/Project/Home.html target=_blank>HOME</a></li>
                         <li><a href=https://milobeng02.github.io/Project/product.html target=_blank>Products</a></li>
-                        <li><a href=Home>About</a></li>
-                        <li><a href=Home>Contact</a></li>
-                        <li><a href=Milobeng02.github.io/Project/login.html>Account</a></li>
-                        <img src="images/cart.png" width="20px" height="20px">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href=https://milobeng02.github.io/Project/login.html target=_blank>Account</a></li>
                     </ul>
                 </nav>
-                </pre>
-                    
-                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
-                </div><!--Cart-->
-            <!--NavBar-->
-        </div><!--Container-->
+                <div class="cart-icon">
+                    <img src="cart.png" width="20px" height="20px">
+                </div>
+                <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+            </div></div></div>
+        </div>
     </div> <!-- End of background-container -->
 
     <!--cart item details-->
@@ -49,10 +49,10 @@
             <th class="thcart">Quantity</th>
             <th class="thcart">Subtotal</th>
         </tr>
-        <tr>
+        <tr class="cart-info-row">
             <td>
                 <div class="cart-info">
-                    <img src="images/buy-1.jpg">
+                    <img src="buy-1.jpg">
                     <div>
                         <p>Red Printed Tshirt</p>
                         <small>Price: $49.90</small>
@@ -60,10 +60,54 @@
                     </div>
                 </div>
             </td>
-            <td><input type="number" value="1"></td>
-            <td>$49.90</td>
+            <td><input type="number" value="1" class="cart-quantity"></td>
+            <td class="cart-price">$49.90</td>
+        </tr>
+        <tr class="cart-info-row">
+            <td>
+                <div class="cart-info">
+                    <img src="buy-2.jpg">
+                    <div>
+                        <p>HRX Sport Shoes</p>
+                        <small>Price: $129.90</small>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1" class="cart-quantity"></td>
+            <td class="cart-price">$129.90</td>
+        </tr>
+        <tr class="cart-info-row">
+            <td>
+                <div class="cart-info">
+                    <img src="buy-3.jpg">
+                    <div>
+                        <p>Benneton Sport Long-Pant</p>
+                        <small>Price: $75.90</small>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1" class="cart-quantity"></td>
+            <td class="cart-price">$75.90</td>
         </tr>
     </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td id="subtotal"></td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td id="tax"></td>
+            </tr>
+            <tr>
+                <td>total</td>
+                <td id="total"></td>
+            </tr>
+        </table>
+    </div>
 </div>
     
 
@@ -77,12 +121,12 @@
                     <h3>Download App App</h3>
                     <p>Download App for Android and ios mobile phone.</p>
                     <div class="app-logo">
-                        <img src="images/play-store.png">
-                        <img src="images/app-store.png">
+                        <img src="play-store.png">
+                        <img src="app-store.png">
                     </div>
                 </div>
                 <div class="footer-col-2">
-                    <img src="Images/logo-white.png">
+                    <img src="logo-white.png">
                     <p>Our Purpose Is To Sustainable Make the Pleasure and the 
                         Benefits of Sports Accessible To The Many.</p>
                 </div>
@@ -111,7 +155,7 @@
             </div>
             <hr>
             <p class="copyright">CopyRight 2023</p>
-        </div>
+        </div></div>
     </div>
     <!--Js for toggle menu-->
     <script>
@@ -128,6 +172,52 @@
             }
         }
     </script>
+
+<script>
+
+    function updateTotalPrice() {
+        // Get all rows in the cart
+        var rows = document.querySelectorAll('.cart-info-row');
+
+        // Initialize total variables
+        var subtotal = 0;
+
+        // Loop through each row and calculate subtotal
+        rows.forEach(function (row) {
+            // Get price and quantity elements in the row
+            var priceElement = row.querySelector('.cart-price');
+            var quantityElement = row.querySelector('.cart-quantity');
+
+            // Parse price and quantity values
+            var price = parseFloat(priceElement.innerText.replace('$', ''));
+            var quantity = parseInt(quantityElement.value);
+
+            // Update subtotal
+            subtotal += price * quantity;
+        });
+
+        
+        var taxRate = 0.1; // 10% tax rate
+        var tax = subtotal * taxRate;
+
+        // Calculate total
+        var total = subtotal + tax;
+
+        
+        document.getElementById('subtotal').innerText = '$' + subtotal.toFixed(2);
+        document.getElementById('tax').innerText = '$' + tax.toFixed(2);
+        document.getElementById('total').innerText = '$' + total.toFixed(2);
+    }
+
+    
+    var quantityInputs = document.querySelectorAll('.cart-quantity');
+    quantityInputs.forEach(function (input) {
+        input.addEventListener('input', updateTotalPrice);
+    });
+
+    // Initial calculation on page load
+    updateTotalPrice();
+</script>
 
     
 </body>
