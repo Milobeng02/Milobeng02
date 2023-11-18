@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
+/*-Register & Login & forgotten-password--*/
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +14,7 @@ body{
     min-height:100vh;
     background:url(HD1.jpg) no-repeat;
     background-size: cover;
-    background-position: center;
-    
+    background-position: center;   
 }
 
 .wrapper{
@@ -118,6 +117,21 @@ body{
     text-decoration: underline;
 }
 
+.regiser-link button{
+    width:100%;
+    height:45px;
+    background:#fff;
+    border:none;
+    outline:none;
+    border-radius:40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor:pointer;
+    font-size:16px;
+    color:#333;
+    font-weight: 600;
+}
+
+
 @media only screen and (max-width: 800px) {
     .wrapper {
         width: 80%; 
@@ -179,5 +193,25 @@ body{
     .register-link {
         font-size: 12px; 
     }
+    
+}
+
+/*----Contact Us----*/
+.contact{
+    position:relative;
+    min-height:100vh;
+    padding: 50px 100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    background: url(DeeRedStore.jpg) no-repeat;
+    background-size: cover;
+
+/*---    display:flex;
+        justify-content:center;
+        align-items:center;
+        和display:content的效果一样
+----*/
 }
 
