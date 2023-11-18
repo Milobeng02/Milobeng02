@@ -208,12 +208,12 @@ H4{
 .title::after{
     content:'';
     background: #ff5234;
-    width:180px;
+    width:200px;
     height:5px;
     border-radius:5px;
     position:absolute;
     bottom:0;
-    left:37%;
+    left:39%;
     transform: translateY(-50%)
 }
 .exclusive-deal {
