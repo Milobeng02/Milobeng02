@@ -11,7 +11,7 @@
     align-items: center;
     padding: 10px 5%;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    background: url('images/stripred1.jpg');
+    background: url('stripred1.jpg');
     position: sticky;
     top: 0;
     z-index: 1000;
