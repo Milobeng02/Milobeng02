@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>DCS3003 Website Design Course Survey</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            padding: 10px;
+        }
+        table .row {
+            font-weight: bold;
+        }
+        table caption {
+            font-weight: bold;
+        }
+        button {
+            margin-left: 10px;
+            border-radius: 20px;
+        }
+        form {
+            padding: 10px;
+        }
+        .radio1 [type="radio"] {
+            border-radius: 50%;
+            margin-right: 10px;
+            text-align:right;
+        }
+        .radio2 [type="radio"] {
+            border-radius: 50%;
+            margin-right: 10px;
+            text-align:right;
+        }
+        .button-corner {
+            border: 5px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>DCS3003 Website Design Survey Course</caption>
+        <tr>
+            <th colspan="2" align="left"><u><font>Personal Details</font></u></th>
+        </tr>
+        <tr>
+            <td>Student ID:</td>
+            <td><input type="text" name="StudID" value="StudentID" placeholder="" required></td>
+            <td>Student Name:</td>
+            <td><input type="text" name="Studn" value="Student Name" placeholder="" required></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" name="Emailc" value="Email" placeholder="" required></td>
+            <td>ICNO:</td>
+            <td><input type="text" name="ICNOc" value="ICNO" placeholder="" required></td>
+        </tr>
+        <tr>
+            <td>Course:</td>
+            <td>
+                <select>
+                    <option>Course A</option>
+                    <option>Course B</option>
+                    <option>Course C</option>
+                    <option>Course D</option>
+                </select>
+            </td>
+            <td>D.O.B</td>
+            <td><input type="date" name="date" required></td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <form>
+        <font color="blue"><u><h3>Question</h3></u></font>
+        <font color="red"><u><h3>Please answer all questions</h3></u></font>
+        <div class="radio1">
+            <br><p> 1. Have you grasped the content of the Website Design so far?</p>
+            <input type="radio" name="abc1" value="yes" align="right">Yes<br>
+            <input type="radio" name="abc1" value="no"align="right">No<br>
+            <br><p> 2. Can you now create a simple but interactive website?</p>
+            <input type="radio" name="abc1" value="yes"align="right">Yes<br>
+            <input type="radio" name="abc1" value="no"align="right">No<br>
+        </div>
+        <div class="radio2">
+            <br><p> 3. What have you learned so far?</p>
+            <input type="radio" name="abc2" value="Knowledge"align="right">Knowledge<br>
+            <input type="radio" name="abc2" value="Knowledge"align="right">Practical Skill</button>
+            <input type="radio" name="abc2" value="Knowledge"align="right">Problem Solving</button>
+            <input type="radio" name="abc2" value="Knowledge"align="right">Self-Exploration Skills</button>
+        </div>
+        <br><p> 4. Wish items / suggestions *</p>
+        <textarea style="width: 100%; height: 100px;"></textarea>
+    </form>
+
+    <br><br>
+    <center>
+        <div class="button-corner">
+            <button>Reset</button>
+            <button>Submit</button>
+        </div>
+    </center>
+</body>
+</html>
