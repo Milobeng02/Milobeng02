@@ -5,7 +5,7 @@ let bgImage, bgSound, paddleHitSound, scoreSound, startSound;
 let gameStarted = false;
 
 function preload() {
-  bgImage = loadImage('pongbg.png');
+  bgImage = loadImage('bg.png');
   bgSound = loadSound('bg.mp3');
   paddleHitSound = loadSound('hit.mp3');
   scoreSound = loadSound('score.mp3');
