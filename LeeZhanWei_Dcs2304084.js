@@ -55,6 +55,15 @@ class Animation {
     let dot1X = lerp(initialDot1X, finalDot1X, this.swipeFactor);
     let dot2X = lerp(initialDot2X, finalDot2X, this.swipeFactor);
     let dot3X = lerp(initialDot3X, finalDot3X, this.swipeFactor);
+    
+    // Calculate end points for lines based on angles
+    let x2 = dot2X + this.handLength * cos(this.angle2 - 90) * this.shrinkFactor2;
+    let y2 = height / 2 + this.handLength * sin(this.angle2 - 90) * this.shrinkFactor2;
+    let x3 = dot3X + this.handLength * cos(this.angle3 - 90) * this.shrinkFactor3;
+    let y3 = height / 2 + this.handLength * sin(this.angle3 - 90) * this.shrinkFactor3;
+    let x1 = dot1X + this.handLength * cos(this.angle1 - 90) * this.shrinkFactor1;
+    let y1 = height / 2 + this.handLength * sin(this.angle1 - 90) * this.shrinkFactor1;
+
 
     if (this.phase < 5) {
       stroke(0);
@@ -63,14 +72,6 @@ class Animation {
       ellipse(dot2X, height / 2, 10, 10); // Dot 2
       ellipse(dot3X, height / 2, 10, 10); // Dot 3
     }
-
-    // Calculate end points for lines based on angles
-    let x2 = dot2X + this.handLength * cos(this.angle2 - 90) * this.shrinkFactor2;
-    let y2 = height / 2 + this.handLength * sin(this.angle2 - 90) * this.shrinkFactor2;
-    let x3 = dot3X + this.handLength * cos(this.angle3 - 90) * this.shrinkFactor3;
-    let y3 = height / 2 + this.handLength * sin(this.angle3 - 90) * this.shrinkFactor3;
-    let x1 = dot1X + this.handLength * cos(this.angle1 - 90) * this.shrinkFactor1;
-    let y1 = height / 2 + this.handLength * sin(this.angle1 - 90) * this.shrinkFactor1;
 
     // Draw the lines in sequence
     if (this.phase === 0) {
